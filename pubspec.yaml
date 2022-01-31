@@ -21,7 +21,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  berbix_flutter: ^1.0.0
+  berbix_flutter: ^0.0.1
     # UNCOMMENT For Local Development!!
     # When depending on this package from a real application you should use:
     #   berbix_flutter: ^x.y.z

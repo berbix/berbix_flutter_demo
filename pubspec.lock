@@ -11,9 +11,9 @@ packages:
   berbix_flutter:
     dependency: "direct main"
     description:
-      path: "../berbix_flutter"
-      relative: true
-    source: path
+      name: berbix_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   boolean_selector:
     dependency: transitive
