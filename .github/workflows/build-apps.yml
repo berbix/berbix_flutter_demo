@@ -2,7 +2,6 @@ on: push
 jobs:
   Build-iOS:
     name: Package iOS App
-    needs: Verify-Package
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,7 +12,6 @@ jobs:
     - run: flutter build ios --release --no-codesign
   Build-Android:
     name: Package Android App
-    needs: Verify-Package
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
