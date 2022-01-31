@@ -12,7 +12,13 @@ Demonstrates how to use the berbix_flutter plugin.
 `flutter build ios --release --no-codesign`
 
 # Add Dependency
-To begin we'll need to add `berbix_flutter` as a dependency to our project. You can accomplish this by updating **pubspec.yaml** in the root directory of your project.
+To begin we'll need to add `berbix_flutter` as a dependency to our project. You can accomplish this by executing:
+
+```Bash
+flutter pub add berbix_flutter
+```
+
+from your project directory. That should update your **pubspec.yml** like so:
 
 ```yaml
 # Other Settings
