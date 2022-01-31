@@ -1,0 +1,29 @@
+PODS:
+  - Berbix (3.0.4)
+  - berbix_flutter (0.0.1):
+    - Berbix
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - berbix_flutter (from `.symlinks/plugins/berbix_flutter/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  "git@github.com:berbix/berbix-ios-spec.git":
+    - Berbix
+
+EXTERNAL SOURCES:
+  berbix_flutter:
+    :path: ".symlinks/plugins/berbix_flutter/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  Berbix: 996fe0d780d7329162f61511ceaae73f04542323
+  berbix_flutter: 7b9ea3ae4b4e6d06289610c71e6461704c4d75ba
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+
+PODFILE CHECKSUM: d544e4b23da89d0c382705c093bc2b4beeea7c26
+
+COCOAPODS: 1.11.2

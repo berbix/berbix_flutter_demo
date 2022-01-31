@@ -1,0 +1,29 @@
+on: push
+jobs:
+  Build-iOS:
+    name: Package iOS App
+    needs: Verify-Package
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.5.3'
+    - run: flutter pub get
+    - run: flutter build ios --release --no-codesign
+  Build-Android:
+    name: Package Android App
+    needs: Verify-Package
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.5.3'
+    - run: flutter pub get
+    - run: flutter build apk
+    - run: flutter build appbundle
