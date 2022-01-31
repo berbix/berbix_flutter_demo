@@ -4,5 +4,8 @@
 
 .packages
 .pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+android/app/local.properties
 
 build/
