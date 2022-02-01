@@ -61,5 +61,29 @@ BerbixFlutter.startFlow();
 
 At this point, the SDK will handle navigation until the user either completes or cancels the verification flow.
 
-## Checking the result of a transaction
+## Handling Errors / Exceptions
+
+When setting a client token, you may encounter a `BerbixMissingClientTokenError` if the client token is omitted. If the token was present, but there was a problem with it, you'll see `BerbixInvalidClientTokenException` instead.
+
+```dart
+try {
+  var result = await BerbixFlutter.setClientToken("your-client-token-here");
+} on BerbixMissingClientTokenError catch (error) {
+  // We forgot to add the client token
+} on BerbixInvalidClientTokenException catch (exception) {
+  // Our client token isn't valid
+}
+```
+
+While presenting a flow, you may encounter other exceptions, which can be caught like so:
+
+```dart
+try {
+  var result = await BerbixFlutter.startFlow();
+} on BerbixFlowException catch (error) {
+  // Something went wrong while completing the flow
+} catch (error) {
+  // Something went wrong elsewhere
+}
+```
 
