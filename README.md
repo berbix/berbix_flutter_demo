@@ -70,8 +70,9 @@ try {
   var result = await BerbixFlutter.setClientToken("your-client-token-here");
 } on BerbixMissingClientTokenError catch (error) {
   // We forgot to add the client token
-} on BerbixInvalidClientTokenException catch (exception) {
-  // Our client token isn't valid
+} catch (error) {
+  // Something went wrong else where
+  FlutterError.presentError(error);
 }
 ```
 
@@ -80,10 +81,11 @@ While presenting a flow, you may encounter other exceptions, which can be caught
 ```dart
 try {
   var result = await BerbixFlutter.startFlow();
-} on BerbixFlowException catch (error) {
-  // Something went wrong while completing the flow
 } catch (error) {
-  // Something went wrong elsewhere
+  // Something went wrong while completing the flow
+  FlutterError.presentError(error);
+  // The area of the error is in error.code ("user", "api", "camera", "state", "berbix")
+  // A detailed error message is available in error.details
 }
 ```
 
