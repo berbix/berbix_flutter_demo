@@ -8,7 +8,7 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '2.5.3'
-    - run: git config --global url."https://github".insteadOf git://github
+    - run: git config --global url."https://github".insteadOf "git@github"
     - run: flutter pub get
     - run: flutter build ios --release --no-codesign
   Build-Android:
