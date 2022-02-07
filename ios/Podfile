@@ -30,7 +30,11 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
+<<<<<<< HEAD
   source 'https://cdn.cocoapods.org/'
+=======
+  source 'https://github.com/CocoaPods/Specs.git'
+>>>>>>> 415b26e (Update Podfile instead)
   source 'https://github.com/berbix/berbix-ios-spec.git'
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
