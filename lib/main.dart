@@ -45,8 +45,11 @@ class _MyAppState extends State<MyApp> {
     });
 
     // Kick off a transaction immediately
-    BerbixFlutter.setClientToken("your-client-token-here");
-    BerbixFlutter.startFlow();
+    final setTokenResult = await BerbixFlutter.setClientToken(
+        "your-client-token");
+    if (setTokenResult == true) {
+      final result = await BerbixFlutter.startFlow();
+    }
   }
 
   @override
